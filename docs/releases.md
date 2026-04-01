@@ -18,8 +18,8 @@ git push origin main --tags
 
 The workflow automatically:
 - Installs dependencies (`npm ci`)
+- Runs typecheck (`npm run typecheck`)
 - Publishes to npm (`npm publish --access public`)
-- `prepublishOnly` script handles `clean && build`
 
 After pushing the tag, verify the publish:
 
