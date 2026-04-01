@@ -7,10 +7,10 @@
     "url": "https://github.com/qmx/pi-stats"
   },
   "type": "module",
-  "main": "dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./stats.ts",
+  "types": "./stats.ts",
   "files": [
-    "dist/**/*",
+    "stats.ts",
     "README.md"
   ],
   "keywords": [
@@ -21,14 +21,13 @@
   ],
   "pi": {
     "extensions": [
-      "./dist/index.js"
+      "./stats.ts"
     ]
   },
   "scripts": {
-    "clean": "rm -rf dist",
-    "build": "tsc -p tsconfig.build.json",
-    "dev": "tsc -p tsconfig.build.json --watch",
-    "prepublishOnly": "npm run clean && npm run build"
+    "typecheck": "tsc --noEmit",
+    "dev": "tsc --noEmit --watch",
+    "prepublishOnly": "npm run typecheck"
   },
   "peerDependencies": {
     "@mariozechner/pi-coding-agent": "*"
