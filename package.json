@@ -1,6 +1,6 @@
 {
   "name": "@qmxme/pi-stats",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Stats widget extension for pi - shows token throughput, usage, and duration",
   "repository": {
     "type": "git",
